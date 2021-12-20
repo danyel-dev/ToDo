@@ -9,7 +9,6 @@ from .models import task
 
 import datetime
 
-# Create your views here.
 
 @login_required
 def taskList(request):

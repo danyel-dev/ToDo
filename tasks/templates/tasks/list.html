@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %} home {% endblock %}
+{% block title %} Home | Minhas Tarefas {% endblock %}
 
 {% block content %}
     <div class="offset-1 col-10 list-div">
-        <h1>Lista de Tarefas</h1>
+        <h1 class='title-list-tasks'>Lista de Tarefas</h1>
         
-        <div class="container dashboard">
+        {% comment %} <div class="container dashboard">
             <div class="col-4 dashboard-box" id="dashboard-lastdays">
                 <h4>Finalizadas nos últimos 30 dias</h4>
                 <span>{{ tasksrecently }}</span>
@@ -21,12 +21,11 @@
                 <h4>Tarefas para fazer</h4>
                 <span>{{ tasksDoing }}</span>
             </div>
-        </div>
+        </div> {% endcomment %}
 
-        <a href="{% url 'newtask' %}" id="add-task">
-            <div class="col-2 add-div">
-                <i class="fas fa-plus"></i> Adicionar tarefa
-            </div>
+        <a href="{% url 'newtask' %}" id="new-task">
+            <i class="fas fa-plus"></i> 
+            <span> Adicionar Tarefa </span>
         </a>
         
         <div class="col-9 search-div">
